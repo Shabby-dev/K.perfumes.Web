@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: #111;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+}
+header {
+  background: #222;
+  padding: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+.nav-header{
+    text-decoration: none;
+    font-size: 3vh;
+    display: flex;
+    margin: auto 40px;
+    padding: 10px;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+input {
+    padding: 10px;
+    border: 1px solid#ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+.encabezado{
+background-color: #333;
+color: white;
+padding: 20px;
+text-align: center;
+}
+
+.contacto form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid ;
+    padding: 15px;
+    background-color: #555;
+    border-radius: 8px;
+    width: 450px;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+}
+
+footer {
+    background: #111;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}

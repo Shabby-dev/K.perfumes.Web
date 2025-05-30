@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+header {
+  background: #222;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.bestsellers, .launches {
+  padding: 2rem;
+  background-color: #1c1c1c;
+}
+
+.bestsellers h2, .launches h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.product-grid {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-card {
+  flex: 1;
+  background: #333;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.quote-banner {
+  background: #000;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.gallery {
+  display: flex;
+  padding: 2rem;
+  gap: 1rem;
+  justify-content: center;
+  background: #181818;
+}
+
+.card {
+  background: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+}
+
+footer {
+  background: #111;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
