@@ -1,17 +1,37 @@
-
+@font-face {
+  font-family: 'Dubiel';
+  src: url('/assets/fonts/DubielItalic.woff2') format('woff2'),
+       url('/assets/fonts/DubielItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
 :root {
   --color-principal: #1c1c1c;
   --color-secundario: #3d3d3d;
   --color-fondo: #454545;
   --color-texto: #f6f6f6;
   --color-texto-secundario: #e7e7e7;
+  --gold-crayola: hsl(38, 61%, 73%);
+  /* --quick-silver: hsla(0, 0%, 65%, 1); */
+
+  /*Fuentes*/
+  --fontFamily:'Dubiel', sans-serif;
+  font-family: 'DubielPlain', sans-serif;
+  --weight-bold: 700;
+  --weight-regular: 400;    
+  --font-italic: italic;    
+  --font-normal: "DubielPlain";               
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-} 
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html{
     font-size: 62.5%;
 }
@@ -21,20 +41,42 @@ body{
     color: #fff;
 }
 h1{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    padding: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 header {
-  background: #222;
-  padding: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Transparente */
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
+
+.logo {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  font-size: 2.5rem;
+}
+
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -43,7 +85,7 @@ header {
   margin: 0;
 }
 
-.nav-links li a {
+.nav-links li a { 
   text-decoration: none;
   color: var(--color-texto);
   font-weight: 500;
@@ -60,23 +102,139 @@ header nav a {
   text-decoration: none;
 }
 
-.nav-header{
-    text-decoration: none;
-    font-size: 3vh;
-    display: flex;
-    margin: auto 40px;
-    padding: 10px;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: right;
+
+/*Banner*/
+.slider_sesion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  object-fit: contain;
 }
 
+.texto_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%); /* Puedes ajustar el -60% para subirlo más */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  z-index: 100;
+  color: white;
+}
 
+.texto_img .titulo_img {
+  font-size: 9rem;
+  margin: 2px;
+  font-family: var(--fontFamily);
+  font-weight: var(--weight-bold);
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 100;
+  z-index: 2;
+}
 
-img{
+.texto_img .subtitulo_abajo {
+  font-size: 3rem;
+  margin: -1rem;
+  font-family: var(--font-normal);
+  font-weight: var(--font-italic);
+  position: relative;
+  z-index: 100;
+  /* color: var(--gold-crayola); */
+}
+
+.slider_sesion::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6));/*hace el fondo opaco*/
+  z-index: 1;
+}
+
+.slider {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.slider.active {
+  animation: grow 15s infinite linear;
+  object-fit: contain;
+}
+
+section {
+    position: relative; 
+}
+@keyframes grow {
+
+  0% {
+    transform: scale(0.999999);
+    background-image: url(/img/Fondo/Slider1.jpg);
+  }
+
+  25% {
+    background-image: url(/img/Fondo/Slider1.jpg);
+  }
+
+  26% {
+    background-image: url(/img/Fondo/Slider2.jpg);
+  }
+
+  50% {
+    background-image: url(/img/Fondo/Slider2.jpg);
+  }
+
+  51% {
+    background-image: url(/img/Fondo/Slider3.jpg);
+  }
+
+  75% {
+    background-image: url(/img/Fondo/Slider3.jpg);
+  }
+
+  76% {
+    background-image: url(/img/Fondo/Slider4.jpg);
+  }
+
+  100% {
+    transform: scale(1.15);
+    background-image: url(/img/Fondo/Slider4.jpg);
+  }
+}
+p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+/* .p:nth-child(2) {
+  text-align: end;
+} */
+/* img{
     width: 1820px;
     padding: 0 75px;
-} 
+    object-fit: contain;
+}  */
 .lomejor, .lanzamientos {
   padding: 2rem;
   background-color: #1c1c1c;
@@ -149,4 +307,49 @@ footer {
     padding: 2rem;
     text-align: center;
     font-size: 0.9rem;
+}
+
+
+/*Menu Hamburguesa moviles*/
+/* Menú hamburguesa solo en pantallas pequeñas */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+/* Ocultar menú por defecto en móviles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

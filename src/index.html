@@ -4,65 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>K. Perfumes</title>
-
+    <title>K Perfumes</title>
 </head>
 <body>
     <header>
-        <h1>K. Perfumes</h1>
+        <h1 class="logo">K Perfumes</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
         <nav class="nav-header">
             <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="tienda.html">Tienda</a></li>
-            <li><a href="carrito.html" id="cart-icon">🛒 (<span id="cart-count">0</span>)</a>
-
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <!-- <li><a href="carrito.html" id="cart-icon">🛒 (<span id="cart-count">0</span>)</a> -->
+            </ul>
         </nav>
     </header>
 
-
-    <section class="lomejor">
-        <h2>Lo mas comprado</h2>
-        <div class="producto-grid">
-            <div class="/">Imagen perfume mujer</div>
-            <div class="/">Imagen perfume mujer</div>
-        </div>
-    </section>
-
-    <section class="lomejor">
-        <h2>Lo mas comprado</h2>
-        <div class="producto-grid">
-            <div class="producto-card">
-                <img src="/img/perfumehombre2.jpg" alt="">
+    
+    <main>
+        <section>
+            <div class="slider_sesion">
+                <div class="texto_img">
+                    <!-- <h2 class="parrafo_img">K Perfumes</h2> -->
+                    <h1 class="titulo_img">
+                        K PERFUMES
+                        <!-- El lujo no se ve <br>
+                        se huele -->
+                    </h1>
+                    <p class="subtitulo_abajo">
+                        El lujo no se ve se huele
+                        <!-- Ser único también se huele -->
+                    </p>
+                </div>
+                <div class="slider active" style="background-image:url(/img/Fondo/Slider1.jpg);"></div>
+                <div class="slider active" style="background-image:url(/img/Fondo/Slider2.jpg);"></div>
+                <div class="slider active" style="background-image:url(/img/Fondo/Slider3.jpg);"></div>
+                <div class="slider active" style="background-image:url(/img/Fondo/slider4.jpg);"></div>
             </div>
-            <div class="producto-card">
-                <img src="/img/perfumehombre3.jpg" alt="">
+        </section>
+
+        <section class="lomejor">
+            <h2>Lo más comprado</h2>
+            <div class="producto-grid">
+                <div class="/">Imagen perfume mujer</div>
+                <div class="/">Imagen perfume mujer</div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="lanzamientos">
-        <h2>Nuevos lanzamientos</h2>
-        <div class="producto-grid">
-            <div class="producto-card">Nuevo 1</div>
-            <div class="producto-card">Nuevo 2</div>
-        </div>
-    </section>
+        <section class="lomejor">
+            <h2>Lo más comprado</h2>
+            <div class="producto-grid">
+                <div class="producto-card">
+                    <img src="/img/perfumehombre2.jpg" alt="">
+                </div>
+                <div class="producto-card">
+                    <img src="/img/perfumehombre3.jpg" alt="">
+                </div>
+            </div>
+        </section>
 
-    <section class="banner">
-        <p>Perfumes que despiertan emociones</p>
-    </section>
+        <section class="lanzamientos">
+            <h2>Nuevos lanzamientos</h2>
+            <div class="producto-grid">
+                <div class="producto-card">Nuevo 1</div>
+                <div class="producto-card">Nuevo 2</div>
+            </div>
+        </section>
 
-    <section class="Tienda">
-        <div class="card">Sillage</div>
-        <div class="card">Scent layering</div>
-        <div class="card">Edición</div>
-    </section>
+        <section class="banner">
+            <h3>Perfumes que despiertan emociones</h3>
+        </section>
+
+        <section class="Tienda">
+            <div class="card">Sillage</div>
+            <div class="card">Scent layering</div>
+            <div class="card">Edición</div>
+        </section>
+    </main>
     
     <footer>
-        <p>© 2025 Tienda de Perfumes | Términos | Contacto</p>
+        <h3>© 2025 Tienda de Perfumes | Términos | Contacto</h3>
     </footer>
+
+    <!-- JS debe ir al final para asegurar que el DOM cargue -->
+    <script src="script.js"></script>
 </body>
 </html>
