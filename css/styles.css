@@ -12,16 +12,13 @@
   --color-texto: #f6f6f6;
   --color-texto-secundario: #e7e7e7;
   --gold-crayola: hsl(38, 61%, 73%);
-  /* --quick-silver: hsla(0, 0%, 65%, 1); */
-
+   
   /*Fuentes*/
-  --fontFamily:'Dubiel', sans-serif;
-  font-family: 'DubielPlain', sans-serif;
-  --weight-bold: 700;
-  --weight-regular: 400;    
-  --font-italic: italic;    
-  --font-normal: "DubielPlain";               
+  --font-family: 'Dubiel', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
 }
+
 
 
 *,
@@ -30,6 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 html{
@@ -74,6 +72,7 @@ header {
   display: flex;
   gap: 2rem;
   font-size: 2.5rem;
+  font-family: var(--font-italic);
 }
 
 
@@ -133,8 +132,8 @@ header nav a {
 .texto_img .titulo_img {
   font-size: 9rem;
   margin: 2px;
-  font-family: var(--fontFamily);
-  font-weight: var(--weight-bold);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
   letter-spacing: 2px;
   position: relative;
   z-index: 100;
@@ -227,6 +226,14 @@ p {
   background-position: center;
   z-index: 0;
 }
+
+.lomejor h2, .lanzamientos h2 {
+  margin:6vh;
+  font-size: 6rem;
+  font-family: var(--font-italic);
+  text-align: center;
+}
+
 /* .p:nth-child(2) {
   text-align: end;
 } */
@@ -240,23 +247,54 @@ p {
   background-color: #1c1c1c;
 }
 
-.lomejor h2, .lanzamientos h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
 
 .producto-grid {
   display: flex;
   gap: 1rem;
 }
 .producto-grid img{
-  width: 900px;          /* Establece un ancho fijo */
-  height: 900px;         /* Establece una altura fija */
+  width: 500px;          /* Establece un ancho fijo */
   object-fit: cover;     /* Ajusta la imagen recortándola si es necesario */
   display: block;
   margin: auto;
   border-radius: 4px;
+  
+
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
+
+/* Animacion de entrada */
+@keyframes appear {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0); /* top 100%, right 0, bottom 0, left 0 */
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0); /* normal */
+  }
+}
+
+/* .scroll {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 32%;
+} */
+
+/* 
+  @keyframes scale-up{
+    to { scale: 1.5;}
+  }
+
+  @keyframes fade-away {
+    to { opacity: 0;}
+  } animacion de desplazamiento hacia adelante
+
+  section{
+    view-timeline:  --scroll;
+  } */
+
 
 .producto-card {
     flex: flex;
@@ -267,15 +305,18 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
 
-
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(196, 195, 195, 0.1);
+    padding: 2rem;
     display: flex;
-
 }
 .producto-card image{
     width: 130px;
+}
+
+.producto-card:hover {
+  transform: scale(1.05);
 }
 
 .banner {
