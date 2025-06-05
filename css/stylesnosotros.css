@@ -12,15 +12,11 @@
   --color-texto: #f6f6f6;
   --color-texto-secundario: #e7e7e7;
   --gold-crayola: hsl(38, 61%, 73%);
-  /* --quick-silver: hsla(0, 0%, 65%, 1); */
-
+   
   /*Fuentes*/
-  --fontFamily:'Dubiel', sans-serif;
-  font-family: 'DubielPlain', sans-serif;
-  --weight-bold: 700;
-  --weight-regular: 400;    
-  --font-italic: italic;    
-  --font-normal: "DubielPlain";               
+  --font-family: 'Dubiel', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
 }
 
 

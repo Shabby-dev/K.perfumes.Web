@@ -17,6 +17,7 @@
   --font-family: 'Dubiel', sans-serif;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
+  --backgroundcolor: #1c1c1c;
 }
 
 
@@ -245,6 +246,8 @@ p {
 .lomejor, .lanzamientos {
   padding: 2rem;
   background-color: #1c1c1c;
+  font-family: var(--font-family);
+  font-weight: 500;
 }
 
 
@@ -260,7 +263,7 @@ p {
   border-radius: 4px;
   
 
-  aspect-ratio: 1/1;
+  /* aspect-ratio: 1/1; */
   object-fit: contain;
 }
 
@@ -310,6 +313,7 @@ p {
     box-shadow: 0 2px 10px rgba(196, 195, 195, 0.1);
     padding: 2rem;
     display: flex;
+    margin-bottom: 50px;
 }
 .producto-card image{
     width: 130px;
@@ -318,6 +322,110 @@ p {
 .producto-card:hover {
   transform: scale(1.05);
 }
+
+
+
+/*Carrusel Infinito*/
+    .carousel-container {
+      background-color:var(--backgroundcolor);
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+
+    .carousel-track {
+      display: inline-block;
+      animation: scroll 20s linear infinite;
+    }
+
+.carousel-item {
+    display: inline-block;
+    padding: 0;
+    font-size: 8rem;
+    font-weight: bold;
+    color: white;
+    font-family: var(--font-italic);
+    font-weight: 500;
+    }
+
+    .dot {
+      color: #d4af37; /* dorado */
+      margin: 0 10px;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+
+.lonuevo h2, .lanzamientos h2 {
+  margin:6vh;
+  font-size: 6rem;
+  font-family: var(--font-italic);
+  text-align: center;
+}
+
+/* .p:nth-child(2) {
+  text-align: end;
+} */
+/* img{
+    width: 1820px;
+    padding: 0 75px;
+    object-fit: contain;
+}  */
+.lonuevo, .lanzamientos {
+  padding: 2rem;
+  background-color: #1c1c1c;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+
+.producto-grid2 {
+  display: flex;
+  gap: 1rem;
+}
+.producto-grid2 img{
+  width: 500px;          /* Establece un ancho fijo */
+  object-fit: cover;     /* Ajusta la imagen recortándola si es necesario */
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+  
+
+  /* aspect-ratio: 1/1; */
+  object-fit: contain;
+}
+.producto-card2 {
+    flex: flex;
+    background: #333;
+    padding: 0.3em;
+    text-align: center;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+    box-shadow: 0 2px 10px rgba(196, 195, 195, 0.1);
+    padding: 2rem;
+    display: flex;
+    margin-bottom: 50px;
+}
+.producto-card2 image{
+    width: 130px;
+}
+
+.producto-card2:hover {
+  transform: scale(1.05);
+}
+
 
 .banner {
     background: #000;
