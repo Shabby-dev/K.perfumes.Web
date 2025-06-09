@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/stylesnosotros.css">
-    <title>K Perfumes</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K Perfumes</title>
+  <link rel="stylesheet" href="/css/styles-nosotros.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-    <header>
-        <h1 class="logo">K Perfumes</h1>
-        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-        <nav class="nav-header">
-            <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="tienda.html">Tienda</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <!-- <li><a href="carrito.html" id="cart-icon">🛒 (<span id="cart-count">0</span>)</a> -->
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1 class="logo">K-Perfumes</h1>
+    <!-- <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button> -->
+    <nav class="nav-header">
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <!-- <li><a href="carrito.html" id="cart-icon">🛒 (<span id="cart-count">0</span>)</a></li> -->
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section class="contacto">
-                <h2>Contacto</h2>
-                <form action="resultado.html" method="get">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" required />
+  <main>
+    <section class="contacto">
+      <form action="resultado.html" method="get">
+        <h2>Contacto</h2>
 
-                    <label for="correo">Correo:</label>
-                    <input type="email" name="correo" id="correo" required>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required />
 
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea name="mensaje" id="mensaje"></textarea>
+        <label for="correo">Correo:</label>
+        <input type="email" name="correo" id="correo" required />
 
-                    <button type="submit">Enviar</button>
-                </form>
-            </main>
-        </section>
-        <div class="texto-lateral">
-            <h2>Nuestra historia</h2>
-        </div>
-    </main>
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje"></textarea>
 
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
 
-    <footer>
-        <h3>© 2025 Tienda de Perfumes | Términos | Contacto</h3>
-    </footer>
+    <div class="texto-lateral">
+      <h2>Nuestra historia</h2>
+    </div>
+  </main>
 
-    <!--JS debe ir al final para asegurar que el DOM cargue -->
-    <script src="script.js"></script>
+  <footer>
+    <nav class="nav-footer">
+      <div class="footer-content">
+        <h3>© K-Perfumes 2025</h3>
+        <ul class="nav-links">
+          <span>|</span>
+          <!-- <li><a href="index.html">Términos</a></li> -->
+          <!-- <span>|</span> -->
+          <li><a href="nosotros.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+
+  <!-- JS debe ir al final para asegurar que el DOM cargue -->
+  <script src="script.js"></script>
 </body>
 </html>

@@ -17,7 +17,9 @@
   --font-family: 'Dubiel', sans-serif;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
+  --backgroundcolor: #1c1c1c;
 }
+
 
 
 *,
@@ -91,7 +93,7 @@ header {
 }
 
 .nav-links li a:hover {
-  color: var(--color-secundario);
+  color: #f0c040;
 }
 
 header nav a {
@@ -100,60 +102,122 @@ header nav a {
   text-decoration: none;
 }
 
+
 /*Form*/
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.contacto form
-{
-    display: flex;
-    flex-direction: space-between;
-    gap: 15px;
-    border: 1px solid ;
-    padding: 15px;
-    background-color: #555;
-    border-radius: 8px;
-    width: 450px;
-    justify-content: center;
-    margin: 0 auto;
-    color: white;
-    margin-top: 10rem;
-    font-size: 1.5rem;
+h2{
+  text-align: center;
+}
+.contacto form{
+  display: flex;
+  gap: 15px;
+  border: 1px solid ;
+  padding: 15px;
+  background-color: #555;
+  border-radius: 8px;
+  margin: 0 auto;
+  color: white;
+  margin-top: 10rem;
+  font-size: 2rem;
+
+  width: 100%;
+  max-width: 450px;
+
 }
 
 .formulario,
 .texto-lateral {
   flex: 2;
   min-width: 300px;
+  width: 100%;
+  background-color: #f6f6f6;
 }
 
-
 input, textarea{
-    padding: 10px;
-    border: 1px solid#ccc;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
+  padding: 10px;
+  border: 1px solid#ccc;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
 }
 
 button {
   width: fit-content;
   padding: 0.5rem 1rem;
-  background-color: #111;
+  background-color: var(--color-fondo);
   color: white;
   border: none;
   cursor: pointer;
+  display: flex;
+  margin: auto;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: solid 1px;
 }
-
 
 button:hover{
-    background-color: #fafafa;
+  color: #808080;
 }
+
+
+/*footer*/
 footer {
-    background: #111;
-    padding: 2rem;
-    text-align: center;
-    font-size: 0.9rem;
+  background: #111;
+  font-family: var(--font-italic);
+}
+.nav-footer{
+  padding: 4rem;
+  font-size: 0.9rem;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  font-size: 1.8rem;
+  font-family: var(--font-italic);
+  flex-wrap: wrap;
+}
+
+.nav-footer .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* para que no se desborde en pantallas pequeñas */
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li a { 
+  text-decoration: none;
+  color: var(--color-texto);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--color-secundario);
+}
+
+header nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
 }

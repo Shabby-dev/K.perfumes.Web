@@ -11,7 +11,7 @@
   --color-fondo: #454545;
   --color-texto: #f6f6f6;
   --color-texto-secundario: #e7e7e7;
-  --gold-crayola: hsl(38, 61%, 73%);
+  --gold-crayola: #f0c040;
    
   /*Fuentes*/
   --font-family: 'Dubiel', sans-serif;
@@ -93,7 +93,7 @@ header {
 }
 
 .nav-links li a:hover {
-  color: var(--color-secundario);
+  color: #f0c040;
 }
 
 header nav a {
@@ -217,8 +217,9 @@ section {
     background-image: url(/img/Fondo/Slider4.jpg);
   }
 }
+
 p {
-  position: absolute;
+
   top: 0;
   left: 0;
   height: 100%;
@@ -228,11 +229,21 @@ p {
   z-index: 0;
 }
 
-.lomejor h2, .lanzamientos h2 {
+.lomejor {
+  padding: 2rem;
+  background-color: #1e1e1e;
+}
+
+
+.lomejor h2, .lanzamientos  {
   margin:6vh;
   font-size: 6rem;
   font-family: var(--font-italic);
   text-align: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+
 }
 
 /* .p:nth-child(2) {
@@ -253,7 +264,8 @@ p {
 
 .producto-grid {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
+  justify-content: center;
 }
 .producto-grid img{
   width: 500px;          /* Establece un ancho fijo */
@@ -262,7 +274,6 @@ p {
   margin: auto;
   border-radius: 4px;
   
-
   /* aspect-ratio: 1/1; */
   object-fit: contain;
 }
@@ -298,31 +309,68 @@ p {
     view-timeline:  --scroll;
   } */
 
-
 .producto-card {
-    flex: flex;
-    background: #333;
-    padding: 0.3em;
-    text-align: center;
-    border-radius: 10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-
-    box-shadow: 0 2px 10px rgba(196, 195, 195, 0.1);
-    padding: 2rem;
-    display: flex;
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: #333;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(196, 195, 195, 0.1);
+  margin-bottom: 50px;
+  overflow: hidden;
+  cursor: pointer;
 }
-.producto-card image{
-    width: 130px;
+
+.nombre-perfume {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+}
+
+.producto-card img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .producto-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
+
+.nombre-perfume {
+  margin-top: 2rem;
+  color: white;
+  font-family: italic;
+  font-size: 3rem;
+  text-align: center;
+  transition: color 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Animación al hacer hover */
+producto-card:hover img {
+  transform: scale(1.1);
+}
+
+
+.producto-card:hover .nombre-perfume {
+  color: #f0c040;
+  transform: scale(1.05);
+  opacity: 1;
+}
 
 
 /*Carrusel Infinito*/
