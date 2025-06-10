@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K Perfumes</title>
-  <link rel="stylesheet" href="/css/styles-nosotros.css" />
+  <title>K-Perfumes</title>
+  <link rel="stylesheet" href="/frontend/css/styles-nosotros.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <header>
     <h1 class="logo">K-Perfumes</h1>
-    <!-- <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button> -->
     <nav class="nav-header">
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
@@ -22,28 +21,34 @@
     </nav>
   </header>
 
-  <main>
-    <section class="contacto">
-      <form action="resultado.html" method="get">
-        <h2>Contacto</h2>
-
+<section class="contacto">
+  <div class="contenedor-contacto">
+    <!-- FORMULARIO IZQUIERDA -->
+    <div class="formulario">
+      <form id="formulario-contacto">
         <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" required />
+        <input type="text" id="nombre" name="nombre" />
 
         <label for="correo">Correo:</label>
-        <input type="email" name="correo" id="correo" required />
+        <input type="email" id="correo" name="correo" />
 
         <label for="mensaje">Mensaje:</label>
-        <textarea name="mensaje" id="mensaje"></textarea>
+        <textarea id="mensaje" name="mensaje"></textarea>
 
         <button type="submit">Enviar</button>
-      </form>
-    </section>
 
-    <div class="texto-lateral">
-      <h2>Nuestra historia</h2>
+        <div id="mensaje-exito" class="exito-animacion">¡Gracias por contactarnos!</div>
+
+      </form>
     </div>
-  </main>
+
+    <!-- TEXTO DERECHA -->
+    <div class="texto-lateral">
+      <h2>¿Tienes dudas?</h2>
+      <p>Estamos aquí para ayudarte. Escríbenos cualquier pregunta que tengas y te responderemos lo antes posible.</p>
+    </div>
+  </div>
+</section>
 
   <footer>
     <nav class="nav-footer">
@@ -51,8 +56,7 @@
         <h3>© K-Perfumes 2025</h3>
         <ul class="nav-links">
           <span>|</span>
-          <!-- <li><a href="index.html">Términos</a></li> -->
-          <!-- <span>|</span> -->
+
           <li><a href="nosotros.html">Contacto</a></li>
         </ul>
       </div>
@@ -61,5 +65,6 @@
 
   <!-- JS debe ir al final para asegurar que el DOM cargue -->
   <script src="script.js"></script>
+  <script src="/frontend/script/aviso.js"></script>
 </body>
 </html>

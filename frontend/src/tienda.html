@@ -4,29 +4,250 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>K Perfumes</title>
-  <link rel="stylesheet" href="/css/styles-tienda.css" />
+  <link rel="stylesheet" href="/frontend/css/styles-tienda.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/frontend/plugins/fontawesome/css/all.min.css">
 </head>
 
 <body>
   <header>
     <h1 class="logo">K-Perfumes</h1>
-    <!-- <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button> -->
     <nav class="nav-header">
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="tienda.html">Tienda</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
-        <!-- <li><a href="carrito.html" id="cart-icon">🛒 (<span id="cart-count">0</span>)</a></li> -->
       </ul>
     </nav>
+    
+
+    
+    <div class="btn-cart">
+            <button type="button"><i class="fa-solid fa-cart-shopping icon-cart"></i></button>  
+                    <span id="cartCount">0</span>
+
+                    <div class="cart">
+                        <div class="cart-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Description</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="contentProducts">
+                                    <tr>
+                                        <td><img src="/assets/img/products/product-01.jpg" alt=""></td>
+                                        <td>
+                                            Lorem ipsum dolor sit.
+                                        </td>
+                                        <td>$15</td>
+                                        <td>
+                                            <input type="number" min="1">
+                                        </td>
+                                        <td>
+                                            <button type="button">X</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                    <tr>
+                                        <td colspan="5" class="total">
+                                            <h4 class="heading-total">Total: <span id="total"></span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            <button type="button" id="emptyCart">Vaciar carrito</button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                </div> 
   </header>
-  <main>
-    <div><br></div>
-    <div><br></div>
-    <div><br></div>
-    <div><br></div>
-  </main>
+
+
+    <main>
+        <section class="products" id="listProducts">
+            <h2>Productos</h2>
+            <div class="products-grid container">
+                <div class="product">
+                    <img src="/frontend/img/Calvin Klein/CK1.jpg" alt="">
+                    <div class="product-info">
+                        <h4>Eternity CK</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        
+
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="current-price">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="1">Agregar al carro</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/frontend/img/Calvin Klein/CK3.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Man CK</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="2">Agregar al carro</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/frontend/img/Dolce & Gabbano/DG7.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Light Blue </h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="3">Agregar al carro</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/frontend/img/Hugo Boss/bunny-sidhu--uIpJttpzIw-unsplash.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Man</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="4">Agregar al carro</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/frontend/img/Hugo Boss/HugoBoss2.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Absolute</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="5">Agregar al carro</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/frontend/img/Hugo Boss/Hugo boss1.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Infiniti</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="6">Agregar al carro</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/frontend/img/Montblanc/Mont Blanc Explorer.jpeg" alt="image product">
+                    <div class="product-info">
+                        <h4>Explorer</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="7">Agregar al carrot</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/frontend/img/Versace/Versace eros flame.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Eros Flame</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="8">Agregar al carro</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/frontend/img/Versace/versace2.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Eau Fraiche</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="9">Agregar al carro</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/frontend/img/Carolina Herrera/CH4.jpeg" alt="image product">
+                    <div class="product-info">
+                        <h4>CH</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="9">Agregar al carro</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/frontend/img/Carolina Herrera/CH1.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Chic For Men</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="9">Agregar al carro</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/frontend/img/Dolce & Gabbano/DG5.jpeg" alt="image product">
+                    <div class="product-info">
+                        <h4>The Only One</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="9">Agregar al carro</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="/frontend/img/Dolce & Gabbano/DG6.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>L'Imperatrice</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="9">Agregar al carro</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
   <footer>
     <nav class="nav-footer">
@@ -34,8 +255,7 @@
         <h3>© K-Perfumes 2025</h3>
         <ul class="nav-links">
           <span>|</span>
-          <!-- <li><a href="index.html">Términos</a></li> -->
-          <!-- <span>|</span> -->
+
           <li><a href="nosotros.html">Contacto</a></li>
         </ul>
       </div>
@@ -43,6 +263,6 @@
   </footer>
 
   <!-- JS debe ir al final para asegurar que el DOM cargue -->
-  <script src="script.js"></script>
+  <script src="/backend/app2.js"></script>
 </body>
 </html>

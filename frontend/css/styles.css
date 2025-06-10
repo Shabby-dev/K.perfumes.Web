@@ -21,7 +21,6 @@
 }
 
 
-
 *,
 *::before,
 *::after {
@@ -38,6 +37,9 @@ body{
     background-color: #111;
     font-family: "Roboto", sans-serif;
     color: #fff;
+
+  overflow-x: hidden;
+
 }
 h1{
   display: flex;
@@ -185,36 +187,36 @@ section {
 
   0% {
     transform: scale(0.999999);
-    background-image: url(/img/Fondo/Slider1.jpg);
+    background-image: url(/frontend/img/Fondo/slider1.jpg);
   }
 
   25% {
-    background-image: url(/img/Fondo/Slider1.jpg);
+    background-image: url(/frontend/img/Fondo/slider1.jpg);
   }
 
   26% {
-    background-image: url(/img/Fondo/Slider2.jpg);
+    background-image: url(/frontend/img/Fondo/slider2.jpg);
   }
 
   50% {
-    background-image: url(/img/Fondo/Slider2.jpg);
+    background-image: url(/frontend/img/Fondo/slider2.jpg);
   }
 
   51% {
-    background-image: url(/img/Fondo/Slider3.jpg);
+    background-image: url(/frontend/img/Fondo/slider3.jpg);
   }
 
   75% {
-    background-image: url(/img/Fondo/Slider3.jpg);
+    background-image: url(/frontend/img/Fondo/slider3.jpg);
   }
 
   76% {
-    background-image: url(/img/Fondo/Slider4.jpg);
+    background-image: url(/frontend/img/Fondo/slider4.jpg);
   }
 
   100% {
     transform: scale(1.15);
-    background-image: url(/img/Fondo/Slider4.jpg);
+    background-image: url(/frontend/img/Fondo/slider4.jpg);
   }
 }
 
@@ -246,14 +248,6 @@ p {
 
 }
 
-/* .p:nth-child(2) {
-  text-align: end;
-} */
-/* img{
-    width: 1820px;
-    padding: 0 75px;
-    object-fit: contain;
-}  */
 .lomejor, .lanzamientos {
   padding: 2rem;
   background-color: #1c1c1c;
@@ -290,24 +284,57 @@ p {
   }
 }
 
-/* .scroll {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 32%;
-} */
+p {
 
-/* 
-  @keyframes scale-up{
-    to { scale: 1.5;}
-  }
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
 
-  @keyframes fade-away {
-    to { opacity: 0;}
-  } animacion de desplazamiento hacia adelante
+.lomejor2 {
+  padding: 2rem;
+  background-color: #1e1e1e;
+}
 
-  section{
-    view-timeline:  --scroll;
-  } */
+
+.lomejor2 h2, .lanzamientos  {
+  margin:6vh;
+  font-size: 6rem;
+  font-family: var(--font-italic);
+  text-align: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+
+.lomejor2, .lanzamientos {
+  padding: 2rem;
+  background-color: #1c1c1c;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+
+.producto-grid {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+.producto-grid img{
+  width: 500px;          /* Establece un ancho fijo */
+  object-fit: cover;     /* Ajusta la imagen recortándola si es necesario */
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+  
+  /* aspect-ratio: 1/1; */
+  object-fit: contain;
+}
 
 .producto-card {
   display: flex;
@@ -440,7 +467,7 @@ producto-card:hover img {
   gap: 1rem;
 }
 .producto-grid2 img{
-  width: 500px;          /* Establece un ancho fijo */
+  max-width: 500px;          /* Establece un ancho fijo */
   object-fit: cover;     /* Ajusta la imagen recortándola si es necesario */
   display: block;
   margin: auto;
@@ -600,4 +627,9 @@ header nav a {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

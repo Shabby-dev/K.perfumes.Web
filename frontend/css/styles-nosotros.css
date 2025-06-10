@@ -104,65 +104,77 @@ header nav a {
 
 
 /*Form*/
-form {
+.contenedor-contacto {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-h2{
-  text-align: center;
-}
-.contacto form{
-  display: flex;
-  gap: 15px;
-  border: 1px solid ;
-  padding: 15px;
-  background-color: #555;
-  border-radius: 8px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 7rem;
+  flex-wrap: wrap; /* Para que se acomode en móvil */
+  max-width: 1000px;
   margin: 0 auto;
-  color: white;
-  margin-top: 10rem;
+  padding: 2rem;
+  margin-top: 15rem;
+  width: 800px;
+  border-radius: 8px;
   font-size: 2rem;
-
-  width: 100%;
-  max-width: 450px;
-
+  box-shadow: 0 2px 10px rgba(196, 195, 195, 0.1);
+  font-weight: var(--font-weight-bold);
 }
 
 .formulario,
 .texto-lateral {
   flex: 2;
   min-width: 300px;
-  width: 100%;
-  background-color: #f6f6f6;
+
 }
 
-input, textarea{
-  padding: 10px;
-  border: 1px solid#ccc;
-  border-radius: 5px;
-  background-color: #333;
-  color: white;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 2.5rem;
+}
+.formulario, button{
+  text-align: center;
 }
 
 button {
   width: fit-content;
   padding: 0.5rem 1rem;
-  background-color: var(--color-fondo);
-  color: white;
+  background-color: #ffffff;
+  color: black;
   border: none;
   cursor: pointer;
-  display: flex;
-  margin: auto;
-  font-size: 1.5rem;
-  border-radius: 8px;
-  border: solid 1px;
+  text-align: center;
+  margin: 0 auto; /* Esto centra el botón horizontalmente */
 }
 
-button:hover{
-  color: #808080;
+/*Animacion aviso*/
+#mensaje-exito {
+  display: none;
+  margin-top: 2rem;
+  font-size: 2.2rem;
+  color: var(--gold-crayola);
+  text-align: center;
+  animation: aparecer 1s ease-out forwards;
 }
 
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /*footer*/
 footer {
