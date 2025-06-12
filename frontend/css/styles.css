@@ -121,7 +121,7 @@ header nav a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%); /* Puedes ajustar el -60% para subirlo más */
+  transform: translate(-50%, -60%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,7 +160,7 @@ header nav a {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6));/*hace el fondo opaco*/
+  background: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6)); /*hace el fondo opaco*/
   z-index: 1;
 }
 
@@ -267,8 +267,6 @@ p {
   display: block;
   margin: auto;
   border-radius: 4px;
-  
-  /* aspect-ratio: 1/1; */
   object-fit: contain;
 }
 
@@ -276,11 +274,11 @@ p {
 @keyframes appear {
   from {
     opacity: 0;
-    clip-path: inset(100% 0 0 0); /* top 100%, right 0, bottom 0, left 0 */
+    clip-path: inset(100% 0 0 0);
   }
   to {
     opacity: 1;
-    clip-path: inset(0 0 0 0); /* normal */
+    clip-path: inset(0 0 0 0);
   }
 }
 
@@ -326,13 +324,12 @@ p {
   justify-content: center;
 }
 .producto-grid img{
-  width: 500px;          /* Establece un ancho fijo */
-  object-fit: cover;     /* Ajusta la imagen recortándola si es necesario */
+  width: 500px;          
+  object-fit: cover;     
   display: block;
   margin: auto;
   border-radius: 4px;
   
-  /* aspect-ratio: 1/1; */
   object-fit: contain;
 }
 
@@ -401,42 +398,42 @@ producto-card:hover img {
 
 
 /*Carrusel Infinito*/
-    .carousel-container {
-      background-color:var(--backgroundcolor);
-      color: white;
-      overflow: hidden;
-      white-space: nowrap;
-      position: relative;
-      height: 90px;
-      display: flex;
-      align-items: center;
-      margin: 0;
+.carousel-container {
+  background-color:var(--backgroundcolor);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  margin: 0;
     }
 
-    .carousel-track {
-      display: inline-block;
-      animation: scroll 20s linear infinite;
-    }
+.carousel-track {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+}
 
 .carousel-item {
-    display: inline-block;
-    padding: 0;
-    font-size: 8rem;
-    font-weight: bold;
-    color: white;
-    font-family: var(--font-italic);
-    font-weight: 500;
-    }
+  display: inline-block;
+  padding: 0;
+  font-size: 8rem;
+  font-weight: bold;
+  color: white;
+  font-family: var(--font-italic);
+  font-weight: 500;
+}
 
-    .dot {
-      color: #d4af37; /* dorado */
-      margin: 0 10px;
-    }
+.dot {
+  color: #d4af37; /* dorado */
+  margin: 0 10px;
+}
 
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 
 .lonuevo h2, .lanzamientos h2 {
@@ -446,14 +443,6 @@ producto-card:hover img {
   text-align: center;
 }
 
-/* .p:nth-child(2) {
-  text-align: end;
-} */
-/* img{
-    width: 1820px;
-    padding: 0 75px;
-    object-fit: contain;
-}  */
 .lonuevo, .lanzamientos {
   padding: 2rem;
   background-color: #1c1c1c;
@@ -467,14 +456,12 @@ producto-card:hover img {
   gap: 1rem;
 }
 .producto-grid2 img{
-  max-width: 500px;          /* Establece un ancho fijo */
-  object-fit: cover;     /* Ajusta la imagen recortándola si es necesario */
+  max-width: 500px;    
+  object-fit: cover;   
   display: block;
   margin: auto;
   border-radius: 4px;
   
-
-  /* aspect-ratio: 1/1; */
   object-fit: contain;
 }
 .producto-card2 {
@@ -550,7 +537,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap; /* para que no se desborde en pantallas pequeñas */
+  flex-wrap: wrap;
 }
 
 .nav-links {
@@ -587,7 +574,7 @@ header nav a {
 
 /*Menu Hamburguesa moviles*/
 /* Menú hamburguesa solo en pantallas pequeñas */
-.menu-toggle {
+/* .menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
@@ -595,9 +582,9 @@ header nav a {
   color: white;
   cursor: pointer;
   margin-right: 1rem;
-}
+} */
 
-/* Ocultar menú por defecto en móviles */
+/* Ocultar menú por defecto en móviles
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;

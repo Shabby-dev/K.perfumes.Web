@@ -126,13 +126,13 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap; /* para que no se desborde en pantallas pequeñas */
+  flex-wrap: wrap;
 }
 
 
 
 img {
-    width: 100%;
+   width: 100%;
     object-fit: cover;
 }
 
@@ -200,8 +200,7 @@ span {
     box-shadow: 0 0 2.5rem rgb(0,0,0,.10);
     width: 100%;
     max-width: 300px;
-    aspect-ratio: 1 / 1; /* Esto asegura que el contenedor siempre sea cuadrado */
-    /* overflow: hidden; */
+    aspect-ratio: 1 / 1;
     border-radius: 8px;
 }
 .product img{
@@ -290,8 +289,8 @@ span {
     padding: 2rem;
     border-radius: .8rem;
     z-index: 10;
-    max-width: 90vw; /* 👈 evita que se salga de la pantalla */
-    overflow-x: auto; /* 👈 agrega scroll horizontal si es necesario */
+    max-width: 90vw;
+    overflow-x: auto;
     opacity: 0;
     }
 

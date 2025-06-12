@@ -2,9 +2,7 @@
 const mensajeExito = document.getElementById('mensaje-exito');
 
   formulario.addEventListener('submit', function(e) {
-    e.preventDefault(); // Previene el envío real
-
-    // Aquí podrías enviar los datos a un servidor con fetch()
+    e.preventDefault();
 
     // Muestra el mensaje con animación
     mensajeExito.style.display = 'block';
@@ -12,7 +10,7 @@ const mensajeExito = document.getElementById('mensaje-exito');
     // Borra el formulario (opcional)
     formulario.reset();
 
-    // Ocultar el mensaje después de 5 segundos (opcional)
+    // Ocultar el mensaje después de 5 segundos
     setTimeout(() => {
       mensajeExito.style.display = 'none';
     }, 5000);

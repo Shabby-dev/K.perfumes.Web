@@ -109,7 +109,7 @@ header nav a {
   justify-content: space-between;
   align-items: flex-start;
   gap: 7rem;
-  flex-wrap: wrap; /* Para que se acomode en móvil */
+  flex-wrap: wrap;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
@@ -152,8 +152,7 @@ button {
   border: none;
   cursor: pointer;
   text-align: center;
-  margin: 0 auto; /* Esto centra el botón horizontalmente */
-}
+  margin: 0 auto;
 
 /*Animacion aviso*/
 #mensaje-exito {
