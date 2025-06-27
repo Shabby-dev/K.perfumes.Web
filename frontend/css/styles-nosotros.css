@@ -153,7 +153,7 @@ button {
   cursor: pointer;
   text-align: center;
   margin: 0 auto;
-
+}
 /*Animacion aviso*/
 #mensaje-exito {
   display: none;
@@ -231,5 +231,4 @@ header nav a {
   color: #fff;
   margin-left: 1rem;
   text-decoration: none;
-}
 }
